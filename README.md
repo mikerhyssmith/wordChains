@@ -17,3 +17,5 @@ Once your code works, try timing it. Does it take less than a second for the abo
 
 
 Wordlist generated from http://wordlist.aspell.net/
+
+N.B. you'll need to unzip words.txt into src/main/resources if you want the file reading method to work...
