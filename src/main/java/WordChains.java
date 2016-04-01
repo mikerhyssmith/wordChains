@@ -4,6 +4,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 /*
@@ -20,4 +22,29 @@ public class WordChains {
         }
         return true;
     }
+
+    public List<String> getWordChain(List<String> dictionary, String start, String end) {
+        List<String> wordChain = new ArrayList<>();
+
+
+        return wordChain;
+    }
+
+    public List<String> getSingleDifferenceWords(String word, List<String> dictionary) {
+        List<String> singleDifferenceWords = new ArrayList<>();
+
+        return singleDifferenceWords;
+
+    }
+
+    public boolean isWordSingleDifference(String givenWord, String compareWord){
+        boolean isSingleDifference = false;
+
+        return false;
+    }
+
+
+
+
+
 }
