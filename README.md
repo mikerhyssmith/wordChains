@@ -15,7 +15,6 @@ The objective of this kata is to write a program that accepts start and end word
 
 Once your code works, try timing it. Does it take less than a second for the above examples given a decent-sized word list? And is the timing the same forwards and backwards (so “lead” into “gold” takes the same time as “gold” into “lead”)?
 
+N.B. words.zip is a simple dictionary of English words for your delectation. You'll need to unzip words.txt into src/main/resources if you want the file reading method to work...
 
 Wordlist generated from http://wordlist.aspell.net/
-
-N.B. you'll need to unzip words.txt into src/main/resources if you want the file reading method to work...
