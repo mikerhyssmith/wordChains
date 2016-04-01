@@ -1,9 +1,13 @@
+import org.assertj.core.util.Lists;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /*
@@ -19,5 +23,42 @@ public class WordChains {
             lines.forEach(System.out::println);
         }
         return true;
+    }
+
+    public List<String> findWordsOfGivenLength(List<String> words, final int length) {
+        return words.stream().filter(s -> s.length() == length).collect(Collectors.toList());
+    }
+
+    public boolean areOneApart(String aString, String otherString) {
+        if(aString.length() != otherString.length()){
+            return false;
+        }
+        int characters = aString.length();
+        int differences = 0;
+        for(int i = 0; i< characters;i++){
+            if(aString.charAt(i) != otherString.charAt(i)){
+                differences++;
+            }
+            if(differences > 1){
+                return false;
+            }
+        }
+        return 1 == differences;
+    }
+
+    public List<String> wordChain(String start, String end) {
+
+        List<String> dictionary = Lists.newArrayList("cat","cog","cat");
+
+        List<String> words = findWordsOfGivenLength(dictionary, start.length());
+
+        List<String> possibleWords = words.stream()
+                .filter(s -> areOneApart(start, s))
+                .collect(Collectors.toList());
+
+        if(possibleWords.contains(end)){
+            return Lists.newArrayList(start,end);
+        }
+        return null;
     }
 }
