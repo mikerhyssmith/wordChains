@@ -38,9 +38,16 @@ public class WordChains {
     }
 
     public boolean isWordSingleDifference(String givenWord, String compareWord){
-        boolean isSingleDifference = false;
-
-        return false;
+        int differences =0;
+        for(int i = 0; i < givenWord.length(); i++){
+            if(givenWord.charAt(i) != compareWord.charAt(i)) {
+                differences++;
+            }
+            if(differences > 1){
+                return false;
+            }
+        }
+        return differences == 1;
     }
 
 

@@ -35,4 +35,18 @@ public class WordChainsTest {
 
         assertThat(wordChain).containsExactly("cat","cot", "cog", "dog");
     }
+
+    @Test
+    public void shouldReturnTrueIfWordIsSingleDifferenceAway(){
+        String wordOne = "cat";
+        String wordTwo = "cot";
+
+        assertThat(wordChains.isWordSingleDifference(wordOne,wordTwo)).isTrue();
+    }
+
+    @Test
+    public void shouldReturnCorrectListOfWordsOneLetterAway() {
+        
+
+    }
 }
